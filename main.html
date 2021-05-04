@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+    <script>
+
+        var worker = new Worker('worker.js');
+        worker.postMessage('starting worker');
+        worker.onmessage = message => {
+            console.info(JSON.stringify(message.data));
+        };
+
+        fetch('data.json')
+            .then(x => x.text())
+            .then(x => console.info('page fetched data: ' + x));
+
+    </script>
+</body>
+
+</html>

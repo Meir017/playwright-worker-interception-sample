@@ -1,0 +1,15 @@
+{
+  "name": "playwright-jswrapper",
+  "version": "1.0.0",
+  "main": "worker.demo.js",
+  "scripts": {
+    "start": "node worker.demo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.10.0"
+  },
+  "devDependencies": {}
+}
